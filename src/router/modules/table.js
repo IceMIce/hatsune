@@ -5,48 +5,19 @@ import Layout from '@/views/layout/Layout'
 const tableRouter = {
   path: '/table',
   component: Layout,
-  redirect: '/table/complex-table',
+  alwaysShow: true, // 当一个的时候也进行下拉
+  redirect: '/table/third_core',
   name: 'Table',
   meta: {
-    title: 'Table',
+    title: 'Third Core',
     icon: 'table'
   },
   children: [
     {
-      path: 'dynamic-table',
-      component: () => import('@/views/table/dynamicTable/index'),
-      name: 'DynamicTable',
-      meta: { title: 'dynamicTable' }
-    },
-    {
-      path: 'drag-table',
-      component: () => import('@/views/table/dragTable'),
-      name: 'DragTable',
-      meta: { title: 'dragTable' }
-    },
-    {
-      path: 'inline-edit-table',
-      component: () => import('@/views/table/inlineEditTable'),
-      name: 'InlineEditTable',
-      meta: { title: 'inlineEditTable' }
-    },
-    {
-      path: 'tree-table',
-      component: () => import('@/views/table/treeTable/treeTable'),
-      name: 'TreeTableDemo',
-      meta: { title: 'treeTable' }
-    },
-    {
-      path: 'custom-tree-table',
-      component: () => import('@/views/table/treeTable/customTreeTable'),
-      name: 'CustomTreeTableDemo',
-      meta: { title: 'customTreeTable' }
-    },
-    {
-      path: 'complex-table',
+      path: 'third_core',
       component: () => import('@/views/table/complexTable'),
-      name: 'ComplexTable',
-      meta: { title: 'complexTable' }
+      name: '接口信息',
+      meta: { title: '接口信息' }
     }
   ]
 }

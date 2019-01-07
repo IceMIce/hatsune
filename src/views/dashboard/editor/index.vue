@@ -1,13 +1,12 @@
 <template>
   <div class="dashboard-editor-container">
     <div class=" clearfix">
-      <pan-thumb :image="avatar" style="float: left"> Your roles:
-        <span v-for="item in roles" :key="item" class="pan-info-roles">{{ item }}</span>
+      <pan-thumb :image="avatar" style="float: left"> Author:
+        <span v-for="item in roles" :key="item" class="pan-info-roles">xuhao,heyingming</span>
+        <span v-for="item in roles" :key="item" class="pan-info-roles">-__-</span>
       </pan-thumb>
-      <github-corner style="position: absolute; top: 0px; border: 0; right: 0;"/>
       <div class="info-container">
-        <span class="display_name">{{ name }}</span>
-        <span style="font-size:20px;padding-top:20px;display:inline-block;">Editor's Dashboard</span>
+        <span class="display_name">大数据&策略测试平台</span>
       </div>
     </div>
     <div>
@@ -19,11 +18,10 @@
 <script>
 import { mapGetters } from 'vuex'
 import PanThumb from '@/components/PanThumb'
-import GithubCorner from '@/components/GithubCorner'
 
 export default {
   name: 'DashboardEditor',
-  components: { PanThumb, GithubCorner },
+  components: { PanThumb },
   data() {
     return {
       emptyGif: 'https://wpimg.wallstcn.com/0e03b7da-db9e-4819-ba10-9016ddfdaed3'
@@ -62,9 +60,9 @@ export default {
       height: 150px;
       line-height: 200px;
       .display_name {
-        font-size: 48px;
+        font-size: 35px;
         line-height: 48px;
-        color: #212121;
+        color: #1789d4a1;
         position: absolute;
         top: 25px;
       }
