@@ -11,7 +11,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/third_core/**': {     //这里是公共部分，在调用接口时后面接不相同的部分，/api就相当于http://192.168.0.199:8926/api这一段
-        target: 'http://192.168.6.174:7240/',   //这里写的是访问接口的域名和端口号
+        target: 'http://127.0.0.1:7240/',   //这里写的是访问接口的域名和端口号
         changeOrigin: true, // 必须加上这个才能跨域请求
         // pathRewrite: {  // 重命名
         //   '^/third_core': ''
@@ -23,8 +23,8 @@ module.exports = {
 
     // can be overwritten by process.env.HOST
     // if you want dev by ip, please set host: '0.0.0.0'
-    host: 'localhost',
-    port: 9527, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: '0.0.0.0',
+    port: 8310, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: false,
